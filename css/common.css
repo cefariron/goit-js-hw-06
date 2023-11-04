@@ -22,3 +22,14 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.list-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.list-li-3 {
+  list-style: none;
+
+}
