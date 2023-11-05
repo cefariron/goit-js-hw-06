@@ -5,9 +5,11 @@ userName.addEventListener("blur", handleBlur)
 function handleBlur(event) {
     const name = event.currentTarget.value;
 
-    if(name.length < userName.dataset.length) {
-        userName.setAttribute("style", "border-color: #f44336;");
+    if(name.length === 6) {
+        userName.classList.remove("invalid"); 
+        userName.classList.add("valid"); 
     } else {
-        userName.setAttribute("style", "border-color: #4caf50;");
+        userName.classList.remove("valid"); 
+        userName.classList.add("invalid"); 
     }
 }
