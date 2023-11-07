@@ -1,9 +1,9 @@
 const fontInput = document.querySelector("#font-size-control")
 const text = document.querySelector("#text")
 
-fontInput.addEventListener("input", handleRange)
+fontInput.value = 24;
+text.setAttribute("style", `font-size: ${fontInput.value}px;`);
 
-function handleRange(event) {
-    let value = fontInput.value;
-    text.setAttribute("style", `font-size: ${value}px;`)
-}
+fontInput.addEventListener("input", () => {
+    text.setAttribute("style", `font-size: ${fontInput.value}px;`)
+});
